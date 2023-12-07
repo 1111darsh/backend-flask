@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "220faf27-c1cd-4e23-a912-04cb4afc6302",
+		"name": "backend-flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5296846"
+	},
+	"item": [
+		{
+			"name": "task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://{{localserver}}/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "task ud",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://{{localserver}}/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Task Title\",\r\n    \"description\": \"Description of the new task\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{localserver}}/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated Task Title\",\r\n    \"description\": \"Updated description of the task\",\r\n    \"done\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{localserver}}/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Task Title\",\r\n    \"description\": \"Description of the new task\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{localserver}}/tasks/2"
+			},
+			"response": []
+		},
+		{
+			"name": "delete  task Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Task Title\",\r\n    \"description\": \"Description of the new task\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{localserver}}/tasks/2"
+			},
+			"response": []
+		}
+	]
+}
