@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+cors = CORS(app)
 tasks = [
     {"id": 1, "title": "Task 1", "description": "This is task 1", "done": False},
     {"id": 2, "title": "Task 2", "description": "This is task 2", "done": False},
@@ -74,4 +74,4 @@ def delete_task(task_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run( host="0.0.0.0", port=0,debug=True )
