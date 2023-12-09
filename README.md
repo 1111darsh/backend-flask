@@ -11,5 +11,10 @@ This is a simple flask Application
 
 
 
+flask app is running on the 5000 port 
+### Docker 
+```bash
+docker run -d -p 5000:5000 --name backendflask  1111darsh/backend-flask:latest
+```
 
 Postman Collections [link](./backend-flask.postman_collection.json)

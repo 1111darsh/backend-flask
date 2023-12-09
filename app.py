@@ -43,7 +43,8 @@ def update_task(task_id):
     if len(task) == 0:
         return jsonify({'error': 'Task not found'}), 404
     task[0]['title'] = request.json.get('title', task[0]['title'])
-    task[0]['description'] = request.json.get('description', task[0]['description'])
+    task[0]['description'] = request.json.get(
+        'description', task[0]['description'])
     task[0]['done'] = request.json.get('done', task[0]['done'])
     return jsonify({'task': task[0]})
 
@@ -74,4 +75,4 @@ def delete_task(task_id):
 
 
 if __name__ == '__main__':
-    app.run( host="0.0.0.0", port=0,debug=True )
+    app.run(host="0.0.0.0", port=5000, debug=True)
